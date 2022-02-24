@@ -1,3 +1,3 @@
 https://fakestoreapi.com
 
-![Here Is The Wireframe](./public.wireframe.png)
+![This Is My Wireframe](relative/path/to/wireframe.png?raw=true "Wireframe")
