@@ -8,10 +8,11 @@ const ProductList = ({ fakeStore }) => {
             <>
               <div className="card">
                 <div className="description">
-                  <h5>Hello</h5>
-                  <h1>Image</h1>
+                  <h5>{value.title}</h5>
+                  <img src={value.image} alt="Images of store products" />
                 </div>
-                <p>description</p>
+                <p>{value.description}</p>
+                <p>{value.price}</p>
               </div>
             </>
           );
