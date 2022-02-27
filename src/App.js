@@ -2,12 +2,24 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import ProductList from "./components/ProductList";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [fakeStore, setFakeStore] = useState([]);
+  console.log(fakeStore);
+
+  useEffect(async () => {
+    const res = await axios.get("https://fakestoreapi.com/products");
+    setFakeStore(res.data);
+  }, []);
+
   return (
     <div className="App">
       <NavBar />
-      <h1>The Fit</h1>
+
+      <ProductList fakeStore={fakeStore} />
       <Footer />
     </div>
   );

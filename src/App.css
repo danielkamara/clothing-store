@@ -1,7 +1,38 @@
+/* Footer Component */
 :root {
   --mainDark: #343a40;
   --mainGray: rgba(109, 109, 109);
   --mainLightGray: rgba(172, 172, 172);
   --mainWhite: #fff;
   --mainBlue: #007bff;
+}
+
+/* Products Component */
+
+h1 {
+  text-align: center;
+}
+
+.h5 {
+  color: purple;
+  text-align: center;
+}
+
+.box {
+  background-color: rgba(172, 172, 172);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: green;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.p {
+  color: green;
+  font-size: 0.9rem;
 }
