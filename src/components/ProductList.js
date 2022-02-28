@@ -3,16 +3,16 @@ const ProductList = ({ fakeStore }) => {
     <>
       <h1>The Fit</h1>
       <div className="box">
-        {fakeStore.map((value) => {
+        {fakeStore.map((product) => {
           return (
             <>
               <div className="card">
                 <div className="description">
-                  <h5>{value.title}</h5>
-                  <img src={value.image} alt="Images of store products" />
+                  <h5>{product.title}</h5>
+                  <img src={product.image} alt="Images of store products" />
                 </div>
-                <p>{value.description}</p>
-                <p>{value.price}</p>
+                <p>{product.description}</p>
+                <p>${product.price}</p>
               </div>
             </>
           );
