@@ -14,12 +14,10 @@ h1 {
 }
 
 .h5 {
-  color: purple;
   text-align: center;
 }
 
 .box {
-  background-color: rgba(172, 172, 172);
   margin: 0 auto;
   display: flex;
   justify-content: space-around;

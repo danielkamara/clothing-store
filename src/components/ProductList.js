@@ -11,9 +11,9 @@ const ProductList = ({ fakeStore }) => {
               <Card style={{ width: "18rem" }}>
                 <Card.Img variant="top" src={product.image} />
                 <Card.Body>
-                  <Card.Title>{product.title}</Card.Title>
-                  <Card.Text>${product.price}</Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Card.Title>{product.title.substring(0, 12)}...</Card.Title>
+                  <Card.Text>{product.price}</Card.Text>
+                  <Button variant="outline-secondary">Add To Cart</Button>
                 </Card.Body>
               </Card>
             </>

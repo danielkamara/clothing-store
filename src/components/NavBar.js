@@ -5,12 +5,15 @@ import {
   NavDropdown,
   Form,
   FormControl,
-  Button,
+  Dropdown,
+  Badge,
 } from "react-bootstrap";
+
+import { BsFillBagDashFill } from "react-icons/bs";
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand href="#home">The Fit</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -33,9 +36,21 @@ const NavBar = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
           </Form>
         </Navbar.Collapse>
+
+        <Nav>
+          <Dropdown>
+            <Dropdown.Toggle variant="dark">
+              <BsFillBagDashFill color="darkGray" fontSize="25px" />
+              <Badge>{10}</Badge>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu style={{ minWidth: 370 }}>
+              <span style={{ padding: 10 }}>Empty</span>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Nav>
       </Container>
     </Navbar>
   );

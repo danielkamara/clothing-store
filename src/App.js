@@ -3,6 +3,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import ProductList from "./components/ProductList";
+import Cart from "./components/Cart";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
