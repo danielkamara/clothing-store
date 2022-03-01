@@ -12,7 +12,7 @@ const ProductList = ({ fakeStore }) => {
                 <Card.Img variant="top" src={product.image} />
                 <Card.Body>
                   <Card.Title>{product.title.substring(0, 12)}...</Card.Title>
-                  <Card.Text>{product.price}</Card.Text>
+                  <Card.Text>${product.price}</Card.Text>
                   <Button variant="outline-secondary">Add To Cart</Button>
                 </Card.Body>
               </Card>
