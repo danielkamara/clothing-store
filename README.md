@@ -1,9 +1,9 @@
 # Clothing Store
 
-- This is an app of a clothing store using ReactJS
+This is an app of a clothing store using ReactJS
 
-- The api used is from: https://fakestoreapi.com
-- Here is the website https://brave-morse-0ed527.netlify.app/
+The api used is from: https://fakestoreapi.com
+Here is the website https://brave-morse-0ed527.netlify.app/
 
 Packages used:
 
