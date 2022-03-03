@@ -10,7 +10,7 @@ const ProductList = ({ fakeStore }) => {
           return (
             <div key={product.id}>
               <Card style={{ width: "18rem" }}>
-                <Link to={`/product/${product.title}`}>
+                <Link to={`/product/${product}`}>
                   <Card.Img variant="top" src={product.image} />
                 </Link>
                 <Card.Body>
