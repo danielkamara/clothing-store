@@ -1,26 +1,13 @@
 import "./App.css";
-
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
-import ProductList from "./components/ProductList";
-import Cart from "./components/Cart";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import Products from "./components/Products";
 
 function App() {
-  const [fakeStore, setFakeStore] = useState([]);
-  console.log(fakeStore);
-
-  useEffect(async () => {
-    const res = await axios.get("https://fakestoreapi.com/products");
-    setFakeStore(res.data);
-  }, []);
-
   return (
     <div className="App">
       <NavBar />
-
-      <ProductList fakeStore={fakeStore} />
+      <Products />
       <Footer />
     </div>
   );
