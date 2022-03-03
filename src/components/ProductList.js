@@ -1,22 +1,31 @@
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const ProductList = ({ fakeStore }) => {
   return (
     <>
-      <h1>The Fit</h1>
-      <div className="box">
+      <h1>Products</h1>
+      <div className="container">
         {fakeStore.map((product) => {
           return (
-            <>
+            <div key={product.id}>
               <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={product.image} />
+                <Link to={`/product/${product.title}`}>
+                  <Card.Img variant="top" src={product.image} />
+                </Link>
                 <Card.Body>
-                  <Card.Title>{product.title.substring(0, 12)}...</Card.Title>
-                  <Card.Text>{product.price}</Card.Text>
+                  <Link to={`/product/${product.title}`}>
+                    <Card.Title>{product.title.substring(0, 12)}...</Card.Title>
+                  </Link>
+                  <Card.Text>
+                    <>
+                      <strong>$ {product.price}</strong>
+                    </>
+                  </Card.Text>
                   <Button variant="outline-secondary">Add To Cart</Button>
                 </Card.Body>
               </Card>
-            </>
+            </div>
           );
         })}
       </div>

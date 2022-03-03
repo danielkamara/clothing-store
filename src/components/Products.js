@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Product from "../pages/Product";
 import ProductList from "./ProductList";
 
 const Products = () => {
@@ -10,7 +11,11 @@ const Products = () => {
     const res = await axios.get("https://fakestoreapi.com/products");
     setFakeStore(res.data);
   }, []);
-  return <ProductList fakeStore={fakeStore} />;
+  return (
+    <div>
+      <ProductList fakeStore={fakeStore} />
+    </div>
+  );
 };
 
 export default Products;

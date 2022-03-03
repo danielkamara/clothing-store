@@ -9,13 +9,14 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 
 ReactDOM.render(
-  // <Provider store={store}>
   <Router>
+    {/* <Provider store={store}> */}
     <React.StrictMode>
       <App />
     </React.StrictMode>
+    {/* </Provider> */}
   </Router>,
-  // </Provider>,
+
   document.getElementById("root")
 );
 
