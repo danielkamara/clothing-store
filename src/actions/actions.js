@@ -21,7 +21,7 @@ export const getProducts = () => async (dispatch) => {
 
   try {
     const data = await axios.get("https://fakestoreapi.com/products");
-    dispatch({ type: GET_PRODUCTS_COMPLETE, payload: data.message });
+    dispatch({ type: GET_PRODUCTS_COMPLETE, payload: data.data });
   } catch (err) {
     dispatch({ type: GET_PRODUCTS_FAIL, payload: err.message });
   }
