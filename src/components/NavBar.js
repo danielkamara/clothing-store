@@ -8,6 +8,7 @@ import {
   Dropdown,
   Badge,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import { BsFillBagDashFill } from "react-icons/bs";
 
@@ -19,13 +20,23 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About Us</Nav.Link>
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/about">
+              About Us
+            </Nav.Link>
             <NavDropdown title="Products" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#mens">Mens</NavDropdown.Item>
-              <NavDropdown.Item href="#women">Women's</NavDropdown.Item>
-              <NavDropdown.Item href="#jewelry">Jewelry</NavDropdown.Item>
-              <NavDropdown.Item href="#electronics">
+              <NavDropdown.Item as={Link} to="/men">
+                Mens
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/women">
+                Women's
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/jewelry">
+                Jewelry
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/electronics">
                 Electronics
               </NavDropdown.Item>
             </NavDropdown>
