@@ -3,13 +3,14 @@ import { Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Products from "./components/Products";
-import Product from "./pages/Product";
+import Product from "./components/Product";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Women from "./pages/Women";
 import Men from "./pages/Men";
 import Jewelry from "./pages/Jewelry";
 import Electronics from "./pages/Electronics";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/men" component={Men} />
         <Route path="/jewelry" component={Jewelry} />
         <Route path="/electronics" component={Electronics} />
+        <Route path="/cart" component={Cart} />
       </Switch>
       <Footer />
     </div>
