@@ -5,7 +5,7 @@ import { addProduct } from "../actions/actions";
 
 const Product = (props) => {
   return (
-    <div key={props.product.id}>
+    <div>
       <Card style={{ width: "18rem" }}>
         <Link to={`/product/${props.product}`}>
           <Card.Img variant="top" src={props.product.image} />

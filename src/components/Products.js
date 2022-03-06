@@ -1,10 +1,8 @@
-import axios from "axios";
-import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
 import { getProducts } from "../actions/actions";
 import Product from "./Product";
+
 const mapStateToProps = (state) => {
   return {
     fakeStore: state.products,
@@ -17,9 +15,9 @@ const Products = (props) => {
   }, []);
   return (
     <div className="container">
-      {props.fakeStore.map((product) => {
-        return <Product product={product} />;
-      })}
+      {props.fakeStore.map((product) => (
+        <Product product={product} />
+      ))}
     </div>
   );
 };

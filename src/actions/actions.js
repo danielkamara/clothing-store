@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const GET_PRODUCTS_START = "GET_PRODUCTS_START";
 export const GET_PRODUCTS_COMPLETE = "GET_PRODUCTS_COMPLETE";
+export const GET_PRODUCT = "GET_PRODUCT";
 export const GET_PRODUCTS_FAIL = "GET_PRODUCTS_FAIL";
 
 // Action Types
@@ -21,6 +22,7 @@ export const getProducts = () => async (dispatch) => {
 
   try {
     const data = await axios.get("https://fakestoreapi.com/products");
+
     dispatch({ type: GET_PRODUCTS_COMPLETE, payload: data.data });
   } catch (err) {
     dispatch({ type: GET_PRODUCTS_FAIL, payload: err.message });

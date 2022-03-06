@@ -11,6 +11,7 @@ import Men from "./pages/Men";
 import Jewelry from "./pages/Jewelry";
 import Electronics from "./pages/Electronics";
 import Cart from "./pages/Cart";
+import ProductDescription from "./components/ProductDescription";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/home" component={Products} />
         <Route exact path="/products" component={Products} />
         <Route path="/products/product" component={Product} />
+        <Route path="/products/productId" component={ProductDescription} />
 
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
