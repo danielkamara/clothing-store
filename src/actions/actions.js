@@ -6,11 +6,13 @@ export const GET_PRODUCT = "GET_PRODUCT";
 export const GET_PRODUCTS_FAIL = "GET_PRODUCTS_FAIL";
 
 // Action Types
-export const ADD_PRODUCT = "ADD PRODUCT";
+export const ADD_PRODUCT = "ADD_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
 // Actions
 export const addProduct = (product) => (dispatch) => {
+  console.log(product);
+
   dispatch({ type: ADD_PRODUCT, payload: product });
 };
 export const removeProduct = (product) => (dispatch) => {

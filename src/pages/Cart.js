@@ -3,10 +3,15 @@ import { connect } from "react-redux";
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Cart = ({ fakeStore }) => {
+const mapStateToProps = (state) => ({
+  cart: state.cart,
+});
+
+const Cart = (props) => {
+  console.log(props);
   return (
     <div>
-      {fakeStore.map((product) => {
+      {props.cart.map((product) => {
         return (
           <div>
             <Card style={{ width: "18rem" }}>
@@ -22,7 +27,7 @@ const Cart = ({ fakeStore }) => {
                     <strong>$ {product.price}</strong>
                   </>
                 </Card.Text>
-                <Button variant="outline-secondary">Add To Cart</Button>
+                <Button variant="outline-secondary">Remove Item</Button>
               </Card.Body>
             </Card>
           </div>
@@ -32,7 +37,4 @@ const Cart = ({ fakeStore }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  fakeStore: state.product,
-});
 export default connect(mapStateToProps, {})(Cart);

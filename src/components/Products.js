@@ -15,8 +15,9 @@ const Products = (props) => {
   }, []);
   return (
     <div className="container">
+      <h1>Product Page</h1>
       {props.fakeStore.map((product) => (
-        <Product product={product} />
+        <Product key={product.products} product={product} />
       ))}
     </div>
   );

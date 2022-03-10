@@ -55,7 +55,9 @@ const NavBar = () => {
           <Dropdown>
             <Dropdown.Toggle variant="dark">
               <BsFillBagDashFill color="darkGray" fontSize="25px" />
-              <Badge>{4}</Badge>
+              <Badge as={Link} to="/cart">
+                {4}
+              </Badge>
             </Dropdown.Toggle>
 
             <Dropdown.Menu style={{ minWidth: 370 }}>

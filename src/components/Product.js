@@ -4,6 +4,10 @@ import { connect } from "react-redux";
 import { addProduct } from "../actions/actions";
 
 const Product = (props) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.addProduct(props.product);
+  };
   return (
     <div>
       <Card style={{ width: "18rem" }}>
@@ -21,7 +25,7 @@ const Product = (props) => {
           </Card.Text>
           <Button
             id={props.product.id}
-            onClick={props.addProduct}
+            onClick={handleClick}
             variant="outline-secondary"
           >
             Add To Cart

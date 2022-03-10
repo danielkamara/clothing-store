@@ -18,13 +18,13 @@ export default (state = initialState, action) => {
       // spread state and grab the piece that you need to change
       return {
         ...state,
-        product: [action.payload, ...state.product],
+        cart: [action.payload, ...state.cart],
       };
     case REMOVE_PRODUCT:
-      let newState = state.filter((product) => product !== action.payload);
+      let newState = state.cart.filter((product) => product !== action.payload);
       return {
         ...state.product,
-        product: [newState],
+        cart: newState,
       };
     case GET_PRODUCTS_START:
       return {
